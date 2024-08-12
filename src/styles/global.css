@@ -1,0 +1,137 @@
+/* styles/globals.css */
+
+/* 기본 스타일 */
+.text-normal {
+  color: #000;
+}
+.bg-normal {
+  background-color: #fff;
+}
+
+/* 포켓몬 타입 색상 */
+.text-fire {
+  color: #f6d02f;
+}
+.bg-fire {
+  background-color: #f6d02f;
+}
+
+.text-water {
+  color: #6390f0;
+}
+.bg-water {
+  background-color: #6390f0;
+}
+
+.text-electric {
+  color: #f7d02c;
+}
+.bg-electric {
+  background-color: #f7d02c;
+}
+
+.text-grass {
+  color: #9bcc50;
+}
+.bg-grass {
+  background-color: #9bcc50;
+}
+
+.text-ice {
+  color: #96d9d6;
+}
+.bg-ice {
+  background-color: #96d9d6;
+}
+
+.text-fighting {
+  color: #c22e28;
+}
+.bg-fighting {
+  background-color: #c22e28;
+}
+
+.text-poison {
+  color: #a33ea1;
+}
+.bg-poison {
+  background-color: #a33ea1;
+}
+
+.text-ground {
+  color: #e2bf65;
+}
+.bg-ground {
+  background-color: #e2bf65;
+}
+
+.text-flying {
+  color: #a98ff3;
+}
+.bg-flying {
+  background-color: #a98ff3;
+}
+
+.text-psychic {
+  color: #f95587;
+}
+.bg-psychic {
+  background-color: #f95587;
+}
+
+.text-bug {
+  color: #a6b91a;
+}
+.bg-bug {
+  background-color: #a6b91a;
+}
+
+.text-rock {
+  color: #b6a136;
+}
+.bg-rock {
+  background-color: #b6a136;
+}
+
+.text-ghost {
+  color: #735797;
+}
+.bg-ghost {
+  background-color: #735797;
+}
+
+.text-dragon {
+  color: #6f35fc;
+}
+.bg-dragon {
+  background-color: #6f35fc;
+}
+
+.text-dark {
+  color: #705746;
+}
+.bg-dark {
+  background-color: #705746;
+}
+
+.text-steel {
+  color: #b7b7ce;
+}
+.bg-steel {
+  background-color: #b7b7ce;
+}
+
+.text-fairy {
+  color: #d685ad;
+}
+.bg-fairy {
+  background-color: #d685ad;
+}
+
+/* 기본 없는 타입 */
+.text-none {
+  color: #666;
+}
+.bg-none {
+  background-color: #e0e0e0;
+}
