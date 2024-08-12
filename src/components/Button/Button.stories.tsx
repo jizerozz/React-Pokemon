@@ -6,7 +6,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     children: { control: 'text', defaultValue: 'Click' },
-    color: { control: 'text', defaultValue: 'red' },
+    color: { control: 'text', defaultValue: 'red-500' },
     btnType: { control: 'text', defaultValue: 'lg' },
   },
 };
@@ -18,6 +18,6 @@ const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: '버튼',
-  color: 'navy',
+  color: 'yellow-500',
   btnType: 'sm',
 };

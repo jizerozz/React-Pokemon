@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface InputProps {
+export interface InputProps {
   type: string;
   bsize: 'md' | 'lg';
   placeholder: string;
 }
 
-export default function Input({ type, bsize, placeholder }: InputProps) {
+export function Input({ type, bsize, placeholder }: InputProps) {
   const inputSize = bsize == 'md' ? 'w-1/2' : 'w-full';
   return (
     <input
