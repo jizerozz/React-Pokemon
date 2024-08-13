@@ -5,9 +5,14 @@ const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    children: { control: 'text', defaultValue: 'Click' },
-    color: { control: 'text', defaultValue: 'red-500' },
-    btnType: { control: 'text', defaultValue: 'lg' },
+    children: { control: 'text' },
+    color: { control: 'text' },
+    btnType: { control: 'text' },
+  },
+  args: {
+    children: 'Click',
+    color: 'yellow-500',
+    btnType: 'lg',
   },
 };
 

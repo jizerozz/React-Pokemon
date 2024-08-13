@@ -135,3 +135,10 @@
 .bg-none {
   background-color: #e0e0e0;
 }
+
+.red-500 {
+  @apply bg-red-500;
+}
+.yellow-500 {
+  @apply bg-yellow-400;
+}
