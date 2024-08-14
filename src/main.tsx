@@ -1,11 +1,11 @@
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import Router from './Router';
+import App from './App';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   const root = createRoot(rootElement);
-  root.render(<Router />);
+  root.render(<App />);
 } else {
   console.error('Root element not found');
 }

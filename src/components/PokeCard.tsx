@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 //import { setColors } from './SetColors';
+import { Link } from 'react-router-dom';
 
 interface PokemonType {
   id: number;
@@ -57,7 +58,7 @@ export const PokeCard = ({ url, name }: pokeCardProps) => {
       className={`box-border rounded-lg ${border} w-[8.5rem] h-[8.5rem] z-0  bg-slate-800 justify-between items-center`}
     >
       {pokemon && (
-        <a href={`/pokemon/${name}`}>
+        <Link to={`/pokemon/${name}`}>
           <div
             className={`${text} h-[1.5rem] text-xs w-full pt-1 px-2 text-right rounded-t-lg `}
           >
@@ -82,7 +83,7 @@ export const PokeCard = ({ url, name }: pokeCardProps) => {
           >
             {pokemon.name}
           </div>
-        </a>
+        </Link>
       )}
     </div>
   );

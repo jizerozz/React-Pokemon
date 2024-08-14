@@ -3,7 +3,7 @@ import { Button } from './Button/Button';
 import { Input } from './Input/Input';
 import { useState } from 'react';
 //import { useDebounce } from '../hooks/useDebounce';
-import { pokemon } from '../App';
+import { pokemon } from '../pages/MainPage/MainPage';
 
 export interface AutoCompleteprops {
   allpokemons: pokemon[];
