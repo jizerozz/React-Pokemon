@@ -15,7 +15,7 @@ interface FormatType {
 }
 
 export interface pokeCardProps {
-  id: number;
+  id?: number | undefined;
   url: string;
   name: string;
 }
