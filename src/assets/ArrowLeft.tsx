@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ArrowLeftProps {
-  className: string;
+  className?: string;
 }
 const ArrowLeft: React.FC<ArrowLeftProps> = ({ className }) => {
   return (

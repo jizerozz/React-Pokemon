@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface BalanceProps {
-  className: string;
+  className?: string;
 }
 const Balance: React.FC<BalanceProps> = ({ className }) => {
   return (
