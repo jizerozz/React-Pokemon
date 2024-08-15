@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Loading from '../../assets/Loading';
+import ArrowRight from '../../assets/ArrowRight';
+import ArrowLeft from '../../assets/ArrowLeft';
 
 interface PokemonAbility {
   ability: {
@@ -43,6 +47,7 @@ interface PokemonData {
   abilities: string[];
   stats: { name: string; basestat: number }[];
   DamageRelations: DamageRelations[];
+  types: string[];
 }
 
 export default function DetailPage() {
@@ -81,13 +86,16 @@ export default function DetailPage() {
           abilities: formatPokemonAbilities(abilities),
           stats: formatPokemonStats(stats),
           DamageRelations,
+          types: types.map((type: Damageslot) => type.type.name),
         };
 
         setPokemon(formattedData);
+        console.log(pokemon);
         setIsLoading(false);
       }
     } catch (error) {
       console.error(error);
+      setIsLoading(false);
     }
   };
 
@@ -117,6 +125,45 @@ export default function DetailPage() {
     };
   }
 
-  if (isLoading) return <div>loading...</div>;
-  return <div></div>;
+  if (isLoading)
+    return (
+      <div
+        className={`absolute h-auto w-auto top-1/3 -translate-x-1/2 left-1/2 z-50`}
+      >
+        <Loading />
+      </div>
+    );
+
+  if (!isLoading && !pokemon) {
+    return <div>Not found</div>;
+  }
+
+  const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png`;
+  const bg = `bg-${pokemon?.types?.[0]}`;
+  const text = `text-${pokemon?.types?.[0]}`;
+  return (
+    <article className="flex items-center gap-1 flex-col w-full">
+      <div
+        className={`${bg} w-auto h-full flex flex-col z-0 items-center justify-end relative overflow-hidden`}
+      >
+        {pokemon?.previous && (
+          <Link
+            className="absolute top-[40%] -translate-y-1/2 x-50 left-1"
+            to={`/pokemon/${pokemon?.previous}`}
+          >
+            <ArrowLeft />
+          </Link>
+        )}
+
+        {pokemon?.next && (
+          <Link
+            className="absolute top-[40%] -translate-y-1/2 x-50 left-1"
+            to={`/pokemon/${pokemon?.next}`}
+          >
+            <ArrowRight />
+          </Link>
+        )}
+      </div>
+    </article>
+  );
 }

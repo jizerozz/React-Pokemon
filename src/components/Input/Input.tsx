@@ -8,7 +8,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export function Input({ type, bsize, placeholder, ...props }: InputProps) {
-  const inputSize = bsize == 'md' ? 'w-1/2' : 'w-full';
+  const inputSize = bsize == 'md' ? 'w-1/3' : 'w-full';
   return (
     <input
       type={type}

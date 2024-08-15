@@ -3,7 +3,7 @@ import axios from 'axios';
 //import { setColors } from './SetColors';
 import { Link } from 'react-router-dom';
 
-interface PokemonType {
+export interface PokemonType {
   id: number;
   name: string;
   type: string;

@@ -8,7 +8,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, btnType, color, ...props }: ButtonProps) {
   const size =
-    btnType === 'lg' ? 'w-1/3' : btnType === 'md' ? 'w-1/4' : 'w-1/6';
+    btnType === 'lg' ? 'w-full' : btnType === 'md' ? 'w-1/3' : 'w-1/7';
   return (
     <button
       className={`items-center bg-${color} ${size} rounded-md h-10 text-white`}
