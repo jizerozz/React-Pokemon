@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Loading from '../../assets/Loading';
-import ArrowRight from '../../assets/ArrowRight';
-import ArrowLeft from '../../assets/ArrowLeft';
+import LessThan from '../../assets/LessThan';
+import GreaterThan from '../../assets/GreaterThan';
 
 interface PokemonAbility {
   ability: {
@@ -151,7 +151,7 @@ export default function DetailPage() {
             className="absolute top-[40%] -translate-y-1/2 x-50 left-1"
             to={`/pokemon/${pokemon?.previous}`}
           >
-            <ArrowLeft />
+            <LessThan className="w-5 h-8 p-1" />
           </Link>
         )}
 
@@ -160,9 +160,20 @@ export default function DetailPage() {
             className="absolute top-[40%] -translate-y-1/2 x-50 left-1"
             to={`/pokemon/${pokemon?.next}`}
           >
-            <ArrowRight />
+            <GreaterThan className="w-5 h-8 p-1" />
           </Link>
         )}
+
+        <section className="w-full flex">
+          <img
+            src={img}
+            width="100%"
+            height="auto"
+            loading="lazy"
+            alt={pokemon?.name}
+            className={'object-contain h-full'}
+          />
+        </section>
       </div>
     </article>
   );
