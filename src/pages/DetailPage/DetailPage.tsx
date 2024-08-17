@@ -10,6 +10,7 @@ import Balance from '../../assets/Balance';
 import Vector from '../../assets/Vector';
 import { Type } from '../../components/Type';
 import BaseStat from '../../components/BaseStat';
+import DamageRelation from '../../components/DamageRelation';
 
 interface PokemonAbility {
   ability: {
@@ -33,7 +34,7 @@ interface Damageslot {
   };
 }
 
-interface DamageRelations {
+export interface DamageRelations {
   double_damage_from: { name: string; url: string }[];
   double_damage_to: { name: string; url: string }[];
   half_damage_from: { name: string; url: string }[];
@@ -248,6 +249,7 @@ export default function DetailPage() {
           {pokemon?.DamageRelations && (
             <div className="w-10/12">
               <h2 className={`text-base text-center font-semibold ${text}`}>
+                <DamageRelation damages={pokemon?.DamageRelations} />
                 데미지관계
               </h2>
             </div>
