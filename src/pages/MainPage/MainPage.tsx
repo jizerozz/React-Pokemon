@@ -4,6 +4,7 @@ import '../../styles/global.css';
 import { Button } from '../../components/Button/Button.tsx';
 import { PokeCard } from '../../components/PokeCard.tsx';
 import AutoComplete from '../../components/AutoComplete.tsx';
+import { Link } from 'react-router-dom';
 
 export interface pokemon {
   id?: number | undefined;
@@ -54,11 +55,16 @@ function MainPage() {
   return (
     <>
       <article className="pt-6">
-        <header className="flex flex-col gap-2 w-full px-4 x-50">
+        <header className="flex gap-2 w-full px-4 x-50 mx-auto items-center justify-center">
           <AutoComplete
             allpokemons={allPokemons}
             setdisplayPokemons={setDisplayPokemons}
           />
+          <Link to="/newPost">
+            <div className="upload-content text-xs w-20 text-center hover:bg-slate-700 text-white bg-slate-800 w-[4rem] h-6 p-1 rounded-lg">
+              글쓰기
+            </div>
+          </Link>
         </header>
         <section className="pt-6 flex flex-col justify-content items-center overflow-auto z-0">
           <div className="flex flex-row flex-wrap gap-[16px] items-center justify-center px-2 max-w-4xl">
